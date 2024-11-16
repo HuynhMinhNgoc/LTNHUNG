@@ -92,7 +92,6 @@ List<Widget> _getChildren3(BuildContext context) => <Widget>[
       ),
     ],
   ),
- //======TAG THỐNG KÊ========
 SingleChildScrollView(
   child: Padding(
     padding: const EdgeInsets.all(16.0),
@@ -107,535 +106,472 @@ SingleChildScrollView(
           ],
         ),
         const SizedBox(height: 20),
-Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    // Biểu đồ tròn
-    Expanded(
-      flex: 3, // Giảm flex để dành không gian cho ký hiệu
-      child: Column(
-        children: [
-          SizedBox(
-            height: 200,
-            child: PieChart(
-              PieChartData(
-                sections: [
-                  PieChartSectionData(
-                    value: 20,
-                    color: Colors.blue,
-                    title: '20%',
-                    radius: 60,
-                    titleStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+
+        // Biểu đồ tròn với ký hiệu
+        Column(
+          children: [
+            SizedBox(
+              height: 200,
+              child: PieChart(
+                PieChartData(
+                  sections: [
+                    PieChartSectionData(
+                      value: 20,
+                      color: Colors.blue,
+                      title: '20%',
+                      radius: 60,
+                      titleStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  PieChartSectionData(
-                    value: 20,
-                    color: Colors.orange,
-                    title: '20%',
-                    radius: 60,
-                    titleStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    PieChartSectionData(
+                      value: 20,
+                      color: Colors.orange,
+                      title: '20%',
+                      radius: 60,
+                      titleStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  PieChartSectionData(
-                    value: 20,
-                    color: Colors.green,
-                    title: '20%',
-                    radius: 60,
-                    titleStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    PieChartSectionData(
+                      value: 20,
+                      color: Colors.green,
+                      title: '20%',
+                      radius: 60,
+                      titleStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  PieChartSectionData(
-                    value: 20,
-                    color: Colors.purple,
-                    title: '20%',
-                    radius: 60,
-                    titleStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    PieChartSectionData(
+                      value: 20,
+                      color: Colors.purple,
+                      title: '20%',
+                      radius: 60,
+                      titleStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  PieChartSectionData(
-                    value: 20,
-                    color: Colors.red,
-                    title: '20%',
-                    radius: 60,
-                    titleStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    PieChartSectionData(
+                      value: 20,
+                      color: Colors.red,
+                      title: '20%',
+                      radius: 60,
+                      titleStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 8),
-          Center(
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.pie_chart, color: Colors.blue),
-                const SizedBox(width: 8),
-                Text(
-                'Biểu đồ tròn',
-                style: TextStyle(
-                  fontSize: 14, // Giảm kích thước font
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  ],
                 ),
               ),
+            ),
+            const SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.pie_chart, color: Colors.blue, size: 20),
+                const SizedBox(width: 8),
+                Text('Biểu đồ tròn', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
               ],
             ),
-          ),
-        ],
-      ),
-    ),
-    // Chú thích
-    Expanded(
-      flex: 2, // Tăng flex để ký hiệu gần hơn
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.thermostat, color: Colors.blue, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.circle, color: Colors.blue, size: 16),
-              const SizedBox(width: 4),
-              Text('Nhiệt độ', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.circle, color: Colors.orange, size: 16),
-              const SizedBox(width: 4),
-              Text('Ánh sáng', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              Icon(Icons.water_drop, color: Colors.green, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.circle, color: Colors.green, size: 16),
-              const SizedBox(width: 4),
-              Text('Độ ẩm', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              Icon(Icons.compress, color: Colors.purple, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.circle, color: Colors.purple, size: 16),
-              const SizedBox(width: 4),
-              Text('Áp suất', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              Icon(Icons.speed, color: Colors.red, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.circle, color: Colors.red, size: 16),
-              const SizedBox(width: 4),
-              Text('Gia tốc', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-        ],
-      ),
-    ),
-  ],
-)
-,
-        const SizedBox(height: 40),
-
-Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    // Bar Chart on the Left
-    Expanded(
-      flex: 2,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // Square Frame for the Bar Chart
-          SizedBox(
-            width: 300, // Set width for square aspect ratio
-            height: 300, // Set height for square aspect ratio
-            child: BarChart(
-              BarChartData(
-                barGroups: [
-                  BarChartGroupData(x: 0, barsSpace: 10, barRods: [
-                    BarChartRodData(
-                      y: 30,
-                      colors: [Colors.blue],
-                      width: 20,
-                      borderRadius: BorderRadius.zero, // Square edges
-                    ),
-                  ]),
-                  BarChartGroupData(x: 1, barsSpace: 10, barRods: [
-                    BarChartRodData(
-                      y: 25,
-                      colors: [Colors.orange],
-                      width: 20,
-                      borderRadius: BorderRadius.zero,
-                    ),
-                  ]),
-                  BarChartGroupData(x: 2, barsSpace: 10, barRods: [
-                    BarChartRodData(
-                      y: 20,
-                      colors: [Colors.green],
-                      width: 20,
-                      borderRadius: BorderRadius.zero,
-                    ),
-                  ]),
-                  BarChartGroupData(x: 3, barsSpace: 10, barRods: [
-                    BarChartRodData(
-                      y: 15,
-                      colors: [Colors.purple],
-                      width: 20,
-                      borderRadius: BorderRadius.zero,
-                    ),
-                  ]),
-                  BarChartGroupData(x: 4, barsSpace: 10, barRods: [
-                    BarChartRodData(
-                      y: 10,
-                      colors: [Colors.red],
-                      width: 20,
-                      borderRadius: BorderRadius.zero,
-                    ),
-                  ]),
-                ],
-                titlesData: FlTitlesData(
-                  leftTitles: SideTitles(
-                    showTitles: true,
-                    interval: 5, // Adjust spacing for better readability
-                  ),
-                  bottomTitles: SideTitles(
-                    showTitles: true,
-                    getTitles: (value) {
-                      switch (value.toInt()) {
-                        case 0:
-                          return 'Nhiệt độ';
-                        case 1:
-                          return 'Ánh sáng';
-                        case 2:
-                          return 'Độ ẩm';
-                        case 3:
-                          return 'Áp suất';
-                        case 4:
-                          return 'Gia tốc';
-                        default:
-                          return '';
-                      }
-                    },
-                    rotateAngle: 45, // Rotate labels for better spacing
-                  ),
+            const SizedBox(height: 8),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.thermostat, color: Colors.blue, size: 13),
+                    const SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.blue, size: 16),
+                    const SizedBox(width: 4),
+                    Text('Nhiệt độ', style: TextStyle(fontSize: 12)),
+                  ],
                 ),
-                borderData: FlBorderData(show: true), // Show chart border
-                gridData: FlGridData(show: true, drawVerticalLine: true), // Display grid
-                alignment: BarChartAlignment.spaceBetween, // Adds space between bars
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
+                    const SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.orange, size: 16),
+                    const SizedBox(width: 4),
+                    Text('Ánh sáng', style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Icon(Icons.water_drop, color: Colors.green, size: 13),
+                    const SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.green, size: 16),
+                    const SizedBox(width: 4),
+                    Text('Độ ẩm', style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Icon(Icons.compress, color: Colors.purple, size: 13),
+                    const SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.purple, size: 16),
+                    const SizedBox(width: 4),
+                    Text('Áp suất', style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Icon(Icons.speed, color: Colors.red, size: 13),
+                    const SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.red, size: 16),
+                    const SizedBox(width: 4),
+                    Text('Gia tốc', style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 40),
+// Biểu đồ cột với ký hiệu
+Column(
+  children: [
+    SizedBox(
+      width: 300,
+      height: 300,
+      child: BarChart(
+        BarChartData(
+          barGroups: [
+            BarChartGroupData(x: 0, barsSpace: 10, barRods: [
+              BarChartRodData(
+                y: 30,
+                colors: [Colors.blue],
+                width: 20,
+                borderRadius: BorderRadius.zero,
               ),
+            ]),
+            BarChartGroupData(x: 1, barsSpace: 10, barRods: [
+              BarChartRodData(
+                y: 25,
+                colors: [Colors.orange],
+                width: 20,
+                borderRadius: BorderRadius.zero,
+              ),
+            ]),
+            BarChartGroupData(x: 2, barsSpace: 10, barRods: [
+              BarChartRodData(
+                y: 20,
+                colors: [Colors.green],
+                width: 20,
+                borderRadius: BorderRadius.zero,
+              ),
+            ]),
+            BarChartGroupData(x: 3, barsSpace: 10, barRods: [
+              BarChartRodData(
+                y: 15,
+                colors: [Colors.purple],
+                width: 20,
+                borderRadius: BorderRadius.zero,
+              ),
+            ]),
+            BarChartGroupData(x: 4, barsSpace: 10, barRods: [
+              BarChartRodData(
+                y: 10,
+                colors: [Colors.red],
+                width: 20,
+                borderRadius: BorderRadius.zero,
+              ),
+            ]),
+          ],
+          titlesData: FlTitlesData(
+            leftTitles: SideTitles(
+              showTitles: true,
+              interval: 5, // Khoảng cách số trên trục trái
+            ),
+            bottomTitles: SideTitles(
+              showTitles: true,
+              getTitles: (value) {
+                switch (value.toInt()) {
+                  case 0:
+                    return 'Nhiệt độ';
+                  case 1:
+                    return 'Ánh sáng';
+                  case 2:
+                    return 'Độ ẩm';
+                  case 3:
+                    return 'Áp suất';
+                  case 4:
+                    return 'Gia tốc';
+                  default:
+                    return '';
+                }
+              },
+              rotateAngle: 45, // Xoay tên cột 45 độ
             ),
           ),
-          const SizedBox(height: 10),
-
-          // Chart Title Below
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.bar_chart, color: Colors.blue, size: 20),
-              const SizedBox(width: 8),
-              Text(
-                'Biểu đồ cột',
-                style: TextStyle(
-                  fontSize: 14, // Giảm kích thước font
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-            ],
+          gridData: FlGridData(
+            show: true,
+            drawHorizontalLine: true,
           ),
-        ],
+        ),
       ),
     ),
+    const SizedBox(height: 8),
 
-    // Legend on the Right
-    Expanded(
-      flex: 1,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.thermostat, color: Colors.blue, size: 13),
-              const SizedBox(width: 8),
-              Container(width: 16, height: 16, color: Colors.blue),
-              const SizedBox(width: 8),
-              Text('Nhiệt độ', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
-              const SizedBox(width: 8),
-              Container(width: 16, height: 16, color: Colors.orange),
-              const SizedBox(width: 8),
-              Text('Ánh sáng', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              Icon(Icons.water_drop, color: Colors.green, size: 13),
-              const SizedBox(width: 8),
-              Container(width: 16, height: 16, color: Colors.green),
-              const SizedBox(width: 8),
-              Text('Độ ẩm', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              Icon(Icons.compress, color: Colors.purple, size: 13),
-              const SizedBox(width: 8),
-              Container(width: 16, height: 16, color: Colors.purple),
-              const SizedBox(width: 8),
-              Text('Áp suất', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              Icon(Icons.speed, color: Colors.red, size: 13),
-              const SizedBox(width: 8),
-              Container(width: 16, height: 16, color: Colors.red),
-              const SizedBox(width: 8),
-              Text('Gia tốc', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-        ],
-      ),
+    // Tên và icon dưới biểu đồ
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.bar_chart, color: Colors.blue, size: 20),
+        const SizedBox(width: 8),
+        Text('Biểu đồ cột', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+      ],
     ),
-  ],
-)
-,
+    const SizedBox(height: 8),
 
-
-        const SizedBox(height: 40),
-
-Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    // Line Chart on the Left
-    Expanded(
-      flex: 3, // Điều chỉnh flex để biểu đồ chiếm ít không gian hơn
-      child: Column(
-        children: [
-          // Line Chart
-          SizedBox(
-            height: 200, // Giảm chiều cao biểu đồ để gọn hơn
-            child: LineChart(
-              LineChartData(
-                lineBarsData: [
-                  LineChartBarData(
-                    spots: [
-                      FlSpot(0, 30), // Nhiệt độ
-                      FlSpot(1, 32),
-                      FlSpot(2, 29),
-                      FlSpot(3, 35),
-                    ],
-                    isCurved: true,
-                    belowBarData: BarAreaData(show: false),
-                    barWidth: 3,
-                    colors: [Colors.blue],
-                  ),
-                  LineChartBarData(
-                    spots: [
-                      FlSpot(0, 25), // Ánh sáng
-                      FlSpot(1, 28),
-                      FlSpot(2, 26),
-                      FlSpot(3, 27),
-                    ],
-                    isCurved: true,
-                    belowBarData: BarAreaData(show: false),
-                    barWidth: 3,
-                    colors: [Colors.orange],
-                  ),
-                  LineChartBarData(
-                    spots: [
-                      FlSpot(0, 20), // Độ ẩm
-                      FlSpot(1, 18),
-                      FlSpot(2, 22),
-                      FlSpot(3, 21),
-                    ],
-                    isCurved: true,
-                    belowBarData: BarAreaData(show: false),
-                    barWidth: 3,
-                    colors: [Colors.green],
-                  ),
-                  LineChartBarData(
-                    spots: [
-                      FlSpot(0, 15), // Áp suất
-                      FlSpot(1, 16),
-                      FlSpot(2, 14),
-                      FlSpot(3, 15),
-                    ],
-                    isCurved: true,
-                    belowBarData: BarAreaData(show: false),
-                    barWidth: 3,
-                    colors: [Colors.purple],
-                  ),
-                  LineChartBarData(
-                    spots: [
-                      FlSpot(0, 10), // Gia tốc
-                      FlSpot(1, 12),
-                      FlSpot(2, 11),
-                      FlSpot(3, 13),
-                    ],
-                    isCurved: true,
-                    belowBarData: BarAreaData(show: false),
-                    barWidth: 3,
-                    colors: [Colors.red],
-                  ),
-                ],
-                titlesData: FlTitlesData(
-                  leftTitles: SideTitles(
-                    showTitles: true,
-                    interval: 5,
-                  ),
-                  bottomTitles: SideTitles(
-                    showTitles: true,
-                    getTitles: (value) {
-                      switch (value.toInt()) {
-                        case 0:
-                          return 'T1';
-                        case 1:
-                          return 'T2';
-                        case 2:
-                          return 'T3';
-                        case 3:
-                          return 'T4';
-                        default:
-                          return '';
-                      }
-                    },
-                  ),
-                ),
-                gridData: FlGridData(
-                  show: true,
-                  drawHorizontalLine: true,
-                  horizontalInterval: 5,
-                ),
-                borderData: FlBorderData(show: true),
-              ),
-            ),
-          ),
-          const SizedBox(height: 10), // Giảm khoảng cách giữa biểu đồ và tiêu đề
-
-          // Chart Title Below
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.show_chart, color: Colors.blue, size: 18), // Giảm kích thước icon
-              const SizedBox(width: 5), // Giảm khoảng cách giữa icon và text
-              Text(
-                'Biểu đồ đường',
-                style: TextStyle(
-                  fontSize: 14, // Giảm kích thước font
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ),
-
-    // Spacer to create distance between chart and legend
-    const SizedBox(width: 70), // Khoảng cách giữa biểu đồ và ký hiệu
-
-    // Legend on the Right
-    Expanded(
-      flex: 2, // Giảm flex để legend gọn hơn
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.thermostat, color: Colors.blue, size: 13), // Giảm kích thước icon
-              const SizedBox(width: 4),
-              Icon(Icons.horizontal_rule, color: Colors.blue, size: 16),
-              const SizedBox(width: 4),
-              Text('Nhiệt độ', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 5),
-          Row(
-            children: [
-              Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.horizontal_rule, color: Colors.orange, size: 16),
-              const SizedBox(width: 4),
-               Text('Ánh sáng', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 5),
-          Row(
-            children: [
-              Icon(Icons.water_drop, color: Colors.green, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.horizontal_rule, color: Colors.green, size: 16),
-              const SizedBox(width: 4),
-              Text('Độ ẩm', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 5),
-          Row(
-            children: [
-              Icon(Icons.compress, color: Colors.purple, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.horizontal_rule, color: Colors.purple, size: 16),
-              const SizedBox(width: 4),
-             Text('Áp suất', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-          const SizedBox(height: 5),
-          Row(
-            children: [
-              Icon(Icons.speed, color: Colors.red, size: 13),
-              const SizedBox(width: 4),
-              Icon(Icons.horizontal_rule, color: Colors.red, size: 16),
-              const SizedBox(width: 4),
-              Text('Gia tốc', style: Theme.of(context).textTheme.bodyLarge),
-            ],
-          ),
-        ],
-      ),
+    // Ký hiệu dưới biểu đồ
+    Column(
+      children: [
+        Row(
+          children: [
+            Icon(Icons.thermostat, color: Colors.blue, size: 13),
+            const SizedBox(width: 4),
+            Container(width: 16, height: 16, color: Colors.blue),
+            const SizedBox(width: 4),
+            Text('Nhiệt độ', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
+            const SizedBox(width: 4),
+            Container(width: 16, height: 16, color: Colors.orange),
+            const SizedBox(width: 4),
+            Text('Ánh sáng', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.water_drop, color: Colors.green, size: 13),
+            const SizedBox(width: 4),
+            Container(width: 16, height: 16, color: Colors.green),
+            const SizedBox(width: 4),
+            Text('Độ ẩm', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.compress, color: Colors.purple, size: 13),
+            const SizedBox(width: 4),
+            Container(width: 16, height: 16, color: Colors.purple),
+            const SizedBox(width: 4),
+            Text('Áp suất', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.speed, color: Colors.red, size: 13),
+            const SizedBox(width: 4),
+            Container(width: 16, height: 16, color: Colors.red),
+            const SizedBox(width: 4),
+            Text('Gia tốc', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+      ],
     ),
   ],
 ),
-        const SizedBox(height: 20),
+const SizedBox(height: 40),
+
+
+// Biểu đồ đường với ký hiệu
+Column(
+  children: [
+    SizedBox(
+      height: 200,
+      child: LineChart(
+        LineChartData(
+          lineBarsData: [
+            // Nhiệt độ
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 30),
+                FlSpot(1, 32),
+                FlSpot(2, 29),
+                FlSpot(3, 35),
+              ],
+              isCurved: true,
+              barWidth: 3,
+              colors: [Colors.blue],
+            ),
+            // Ánh sáng
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 25),
+                FlSpot(1, 28),
+                FlSpot(2, 26),
+                FlSpot(3, 27),
+              ],
+              isCurved: true,
+              barWidth: 3,
+              colors: [Colors.orange],
+            ),
+            // Độ ẩm
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 20),
+                FlSpot(1, 18),
+                FlSpot(2, 22),
+                FlSpot(3, 21),
+              ],
+              isCurved: true,
+              barWidth: 3,
+              colors: [Colors.green],
+            ),
+            // Áp suất
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 15),
+                FlSpot(1, 16),
+                FlSpot(2, 14),
+                FlSpot(3, 15),
+              ],
+              isCurved: true,
+              barWidth: 3,
+              colors: [Colors.purple],
+            ),
+            // Gia tốc
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 10),
+                FlSpot(1, 12),
+                FlSpot(2, 11),
+                FlSpot(3, 13),
+              ],
+              isCurved: true,
+              barWidth: 3,
+              colors: [Colors.red],
+            ),
+          ],
+          titlesData: FlTitlesData(
+            leftTitles: SideTitles(
+              showTitles: true,
+              interval: 5, // Khoảng cách số trên trục trái
+            ),
+            bottomTitles: SideTitles(
+              showTitles: true,
+              getTitles: (value) {
+                switch (value.toInt()) {
+                  case 0:
+                    return 'T1';
+                  case 1:
+                    return 'T2';
+                  case 2:
+                    return 'T3';
+                  case 3:
+                    return 'T4';
+                  default:
+                    return '';
+                }
+              },
+            ),
+          ),
+          gridData: FlGridData(
+            show: true,
+            drawHorizontalLine: true,
+            horizontalInterval: 5, // Khoảng cách số ngang
+          ),
+        ),
+      ),
+    ),
+    const SizedBox(height: 8),
+
+    // Tên và icon dưới biểu đồ
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.show_chart, color: Colors.blue, size: 20),
+        const SizedBox(width: 8),
+        Text('Biểu đồ đường', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+      ],
+    ),
+    const SizedBox(height: 8),
+
+    // Ký hiệu dưới biểu đồ
+    Column(
+      children: [
+        Row(
+          children: [
+            Icon(Icons.thermostat, color: Colors.blue, size: 13),
+            const SizedBox(width: 4),
+            Icon(Icons.horizontal_rule, color: Colors.blue, size: 16),
+            const SizedBox(width: 4),
+            Text('Nhiệt độ', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.wb_sunny, color: Colors.orange, size: 13),
+            const SizedBox(width: 4),
+            Icon(Icons.horizontal_rule, color: Colors.orange, size: 16),
+            const SizedBox(width: 4),
+            Text('Ánh sáng', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.water_drop, color: Colors.green, size: 13),
+            const SizedBox(width: 4),
+            Icon(Icons.horizontal_rule, color: Colors.green, size: 16),
+            const SizedBox(width: 4),
+            Text('Độ ẩm', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.compress, color: Colors.purple, size: 13),
+            const SizedBox(width: 4),
+            Icon(Icons.horizontal_rule, color: Colors.purple, size: 16),
+            const SizedBox(width: 4),
+            Text('Áp suất', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        Row(
+          children: [
+            Icon(Icons.speed, color: Colors.red, size: 13),
+            const SizedBox(width: 4),
+            Icon(Icons.horizontal_rule, color: Colors.red, size: 16),
+            const SizedBox(width: 4),
+            Text('Gia tốc', style: TextStyle(fontSize: 12)),
+          ],
+        ),
+      ],
+    ),
+  ],
+),
+
       ],
     ),
   ),
-),
+)
+
+
+,
 
 
 
