@@ -1,6 +1,7 @@
 import 'package:tab_container/tab_container.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'Form_Control.dart';
 
 void main() {
   runApp(const MyApp());
@@ -107,16 +108,7 @@ List<Widget> _getChildren3(BuildContext context) => <Widget>[
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Documents', style: Theme.of(context).textTheme.headlineSmall),
-          const Expanded(
-            child: Column(
-              children: [
-                ListTile(title: Text('Document 1')),
-                ListTile(title: Text('Document 2')),
-                ListTile(title: Text('Document 3')),
-              ],
-            ),
-          ),
+          Expanded(child: FormControl()),
         ],
       ),
       SingleChildScrollView(
