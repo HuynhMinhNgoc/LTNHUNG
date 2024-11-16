@@ -1,6 +1,10 @@
 import 'package:tab_container/tab_container.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
+=======
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+>>>>>>> 70a2e5d453fa5d214fd562d2b7d9961959cb485d
 
 void main() {
   runApp(const MyApp());
@@ -61,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 List<Widget> _getTabs3(BuildContext context) => <Widget>[
+<<<<<<< HEAD
   const Icon(Icons.info),
   const Icon(Icons.text_snippet),
   const Icon(Icons.person),
@@ -193,12 +198,179 @@ List<Widget> _getChildren3(BuildContext context) => <Widget>[
                       ),
                     ],
                   ),
+=======
+      const Icon(Icons.info),
+      const Icon(Icons.text_snippet),
+      const Icon(Icons.person),
+      const Icon(Icons.menu),
+    ];
+
+List<Widget> _getChildren3(BuildContext context) => <Widget>[
+      // Tab Info
+      Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Information', style: Theme.of(context).textTheme.headlineSmall),
+          // Settings tab
+          const Expanded(
+            child: Column(
+              children: [
+                ListTile(
+                  leading: Icon(FontAwesomeIcons.temperatureHigh),
+                  title: Text('Temperature (32°C)'),
+                ),
+                ListTile(
+                  leading: Icon(FontAwesomeIcons.lightbulb),
+                  title: Text('Light (400 lx)'),
+                ),
+                ListTile(
+                  leading: Icon(FontAwesomeIcons.tint),
+                  title: Text('Humidity (60 %RH)'),
+                ),
+                ListTile(
+                  leading: Icon(FontAwesomeIcons.compressArrowsAlt),
+                  title: Text('Pressure (1 atm)'),
+                ),
+                ListTile(
+                  leading: Icon(FontAwesomeIcons.tachometerAlt),
+                  title: Text('Acceleration (9.8 m/s²)'),
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+      // Tab Documents
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Documents', style: Theme.of(context).textTheme.headlineSmall),
+          const Expanded(
+            child: Column(
+              children: [
+                ListTile(title: Text('Document 1')),
+                ListTile(title: Text('Document 2')),
+                ListTile(title: Text('Document 3')),
+              ],
+            ),
+          ),
+        ],
+      ),
+      // Tab Profile
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Profile', style: Theme.of(context).textTheme.headlineSmall),
+          const Expanded(
+            child: Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.person),
+                  title: Text('John Doe'),
+                  subtitle: Text('john.doe@email.com'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.cake),
+                  title: Text('Birthday'),
+                  subtitle: Text('1/1/1985'),
+>>>>>>> 70a2e5d453fa5d214fd562d2b7d9961959cb485d
                 ),
               ],
             ),
           ),
         ],
       ),
+<<<<<<< HEAD
     ),
   ),
 ];
+=======
+      // Tab Menu với các tab con
+      SizedBox(
+        height: double.infinity, // Đảm bảo chiều cao đầy đủ
+        child: DefaultTabController(
+          length: 3,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Menu', style: Theme.of(context).textTheme.headlineSmall),
+              const SizedBox(height: 20),
+              // TabBar cho các tab con
+              const TabBar(
+                labelColor: Colors.blue, // Màu chữ tab được chọn
+                unselectedLabelColor:
+                    Colors.grey, // Màu chữ tab không được chọn
+                tabs: [
+                  Tab(text: 'Settings'),
+                  Tab(text: 'Help'),
+                  Tab(text: 'About'),
+                ],
+              ),
+              const SizedBox(height: 20),
+              // Nội dung các tab con
+              const Expanded(
+                child: TabBarView(
+                  children: [
+                    // Settings tab
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.dark_mode),
+                            title: Text('Dark Mode'),
+                            trailing: Switch(
+                              value: false,
+                              onChanged: null,
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.notifications),
+                            title: Text('Notifications'),
+                            trailing: Switch(
+                              value: true,
+                              onChanged: null,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Help tab
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.help),
+                            title: Text('FAQs'),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.support),
+                            title: Text('Support'),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // About tab
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.info),
+                            title: Text('Version 1.0.0'),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.copyright),
+                            title: Text('© 2024 Your Company'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ];
+>>>>>>> 70a2e5d453fa5d214fd562d2b7d9961959cb485d
